@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+<head>
+ 
+<title>A jQuery Drag-and-Drop Number Cards Game</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+ 
+<script type="text/javascript" src="../js/jquery-min.js"></script>
+<script type="text/javascript" src="../js/googlejquery-min.js"></script>
+<!--link rel="stylesheet" href="../css/drag.css"-->
+
+<style>
+    
+    body {
+        background: orange;       
+    }  
+  #section {
+    height: 336px;
+    margin: 7px;
+
+  }
+
+  .container {
+    float: left;
+    width: 972px;
+    margin: 5px;
+    height: 336px;
+    background: url("../images/order_bg1.jpg");
+  }
+
+  .one {
+    height: 75px;
+    margin: 2px;
+  }
+
+  #box {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 587px;
+    margin-top: 11px;
+    width: 30px;
+  }
+
+  .two {
+    margin: 2px;
+    height: 40px;
+  }
+
+  h3 {
+    margin: 0px;
+    margin-left: 6px;
+    font-size: 14px;
+    line-height: 31px;
+  }
+
+  #box_2 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 441px;
+    margin-top: 23px;
+    width: 30px;
+    float: left;
+  }
+
+  #box_2_1 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 243px;
+    margin-top: 23px;
+    width: 30px;
+    float: left;
+  }
+
+  .three {
+    height: 113px;
+  }
+
+  #box_3_1 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 359px;
+    margin-top: 54px;
+    width: 30px;
+    float: left;
+  }
+
+  #box_3_2 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 105px;
+    margin-top: 60px;
+    width: 30px;
+    float: left;
+  }
+
+  #box_3_3 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 148px;
+    margin-top: 50px;
+    width: 30px;
+    float: left;
+  }
+
+  #box_3_4 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 97px;
+    margin-top: 52px;
+    width: 30px;
+    float: left;
+  }
+
+  #box_3_5 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 243px;
+    margin-top: 23px;
+    width: 30px;
+    float: left;
+  }
+
+  #box_3_6 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 243px;
+    margin-top: 23px;
+    width: 30px;
+    float: left;
+  }
+
+  #box_3_7 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 243px;
+    margin-top: 23px;
+    width: 30px;
+    float: left;
+  }
+
+  #box_3_8 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 243px;
+    margin-top: 23px;
+    width: 30px;
+    float: left;
+  }
+
+  .four {
+    height: 72px;
+  }
+
+  #box_4_1 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 287px;
+    margin-top: 23px;
+    width: 30px;
+    float: left;
+  }
+
+  #box_4_2 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 58px;
+    margin-top: 27px;
+    width: 30px;
+    float: left;
+  }
+
+  #box_4_3 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 65px;
+    margin-top: 30px;
+    width: 30px;
+    float: left;
+  }
+
+  #box_4_4 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 26px;
+    margin-top: 30px;
+    width: 30px;
+    float: left;
+  }
+
+  #box_4_5 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 79px;
+    margin-top: 27px;
+    width: 30px;
+    float: left;
+  }
+
+  #box_4_6 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 42px;
+    margin-top: 28px;
+    width: 30px;
+    float: left;
+  }
+
+  #box_4_7 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 19px;
+    margin-top: 30px;
+    width: 30px;
+    float: left;
+  }
+
+  #box_4_8 {
+    background: none repeat scroll 0 0 red;
+    border-radius: 22px;
+    height: 30px;
+    margin-left: 56px;
+    margin-top: 30px;
+    width: 30px;
+    float: left;
+  }
+  
+  .container_two {
+      height: 69px;
+      margin-top: 60px;
+  }
+  
+  .inner_container {
+      margin: 2px;
+      width: 526px;
+      height: 72px;
+      float: left;
+      margin-left: 75px;
+  }
+  
+  .box_pile1,.box_pile2,.box_pile3,.box_pile4,.box_pile5,.box_pile6,.box_pile7,.box_pile8 {
+      float: left;
+      display: block;
+      height: 50px;
+      width: 50px;
+      margin: 4px;
+      background: none repeat scroll 0px 0px #4B9667;
+      border-style: double;
+      //border-radius: 22px;
+  }
+  
+  #pile1,#pile2,#pile3,#pile4,#pile5,#pile6,#pile7,#pile8 {
+      background: none repeat scroll 0 0 red;
+      border-radius: 22px;
+      height: 30px;
+      width: 30px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 9px;
+  }
+  
+  .container_two_header {
+      float: left;
+      width: 246px;
+      height: 50px;
+  }
+  
+  .container_row {
+      margin-left: auto;    
+      margin-right: auto;
+      width: 831px;
+      height: 80px;
+  }
+  
+  .section_two {
+      float: left;
+      height: 324px;
+      width: 300px;
+  }
+  
+  #missed {
+      height: 30px;
+      width: 150px;
+      border-style: double;
+      margin-top: 6px;
+      text-align: center;
+      padding-top: 11px;
+  }
+  
+  #timer {
+      height: 30px;
+      width: 150px;
+      border-style: double;
+      padding-top: 11px;
+      text-align: center;
+      margin-top: 16px;
+  }
+  
+  #score {
+      height: 30px;
+      width: 150px;
+      border-style: double;
+      margin-top: 6px;
+      text-align: center;
+      padding-top: 11px;
+  }
+  
+  #inorder {
+      height: 40px;
+      width: 274px;
+      border-style: double;
+      margin-top: 6px;
+      text-align: center;
+      padding-top: 11px;
+  }
+  
+  #preorder {
+      height: 40px;
+      width: 274px;
+      border-style: double;
+      margin-top: 6px;
+      text-align: center;
+      padding-top: 11px;
+  }
+  
+  .section_two_container {
+      width: 280px;
+      height: 270px;
+      margin: 5px;
+  }
+</style>
+<script type="text/javascript">
+
+var correctdrag = 0;
+var interval;
+var minutes = 1;
+var seconds = 5;
+var temp_minutes;
+var temp_seconds;
+var e4,e2,e6,bad=0;
+var p1,p2,p3;
+var points_earned=0;
+
+$(init);
+
+
+    function countdown(element) {
+        interval = setInterval(function() {
+            var el = document.getElementById(element);
+            if(seconds == 0) {
+                if(minutes == 0) {
+                    //el.innerHTML = "countdown's over!"; 
+                    //alert("Time out lol");
+                    $('#time_out').bPopup({
+            easing: 'easeOutBack',
+            speed: 450,
+            transition: 'slideDown'
+        });
+                    clearInterval(interval);
+                    return;
+                } else {
+                    minutes--;
+                    seconds = 60;
+                }
+            }
+            if(minutes > 0) {
+                var minute_text = minutes ;//(minutes > 1 ? ' minutes' : ' minute');
+            } else {
+                var minute_text = '00';
+            }
+            seconds--;
+            var second_text = seconds > 1 ? 'seconds' : 'second';
+            el.innerHTML = minute_text + ':' + seconds ;//+ ' ' + second_text + ' remaining';
+            
+        }, 1000);
+    }
+
+function init() 
+{
+countdown('timer');
+$("#box").data('number',"7").droppable({
+    drop: handleCardDrop
+});
+
+$("#box_2").data('number',"10").droppable({
+    drop: handleCardDrop    
+});
+
+$("#box_2_1").data('number',"2").droppable({
+    drop: handleCardDrop
+});
+
+$("#box_3_1").data('number',"4").droppable({
+    drop: handleCardDrop
+});
+
+$("#box_3_2").data('number',"3").droppable({
+    drop: handleCardDrop
+});
+
+$("#box_3_3").data('number',"8").droppable({
+    drop: handleCardDrop
+});
+
+$("#box_3_4").data('number',"70").droppable({
+    drop: handleCardDrop
+});
+
+$("#box_4_1").data('number',"70").droppable({
+    drop: handleCardDrop
+});
+
+$("#box_4_2").data('number',"70").droppable({
+    drop: handleCardDrop
+});
+
+$("#box_4_3").data('number',"70").droppable({
+    drop: handleCardDrop
+});
+
+$("#box_4_4").data('number',"1").droppable({
+    drop: handleCardDrop
+});
+
+$("#box_4_5").data('number',"11").droppable({
+    drop: handleCardDrop
+});
+
+$("#box_4_6").data('number',"70").droppable({
+    drop: handleCardDrop
+});
+
+$("#box_4_7").data('number',"70").droppable({
+    drop: handleCardDrop
+});
+
+$("#box_4_8").data('number',"70").droppable({
+    drop: handleCardDrop
+});
+
+$("#box_4_8").data('number',"70").droppable({
+
+});
+
+$("#pile1").data('number',"4").draggable({
+    cursor: 'move',
+    revert: true
+});
+
+$("#pile2").data('number',"10").draggable({
+    cursor: 'move',
+    revert: true
+});
+
+$("#pile3").data('number',"3").draggable({
+    cursor: 'move',
+    revert: true
+});
+
+$("#pile4").data('number',"1").draggable({
+    cursor: 'move',
+    revert: true
+});
+
+$("#pile5").data('number',"7").draggable({
+    cursor: 'move',
+    revert: true
+});
+
+$("#pile6").data('number',"11").draggable({
+    cursor: 'move',
+    revert: true
+});
+
+$("#pile7").data('number',"8").draggable({
+    cursor: 'move',
+    revert: true
+});
+
+$("#pile8").data('number',"2").draggable({
+    cursor: 'move',
+    revert: true
+});
+
+e4 = document.getElementById("score");
+e4.innerHTML = 'score ::   ' + points_earned;
+  
+e6 = document.getElementById("missed");
+e6.innerHTML = 'missed ::   ' + bad;
+
+e8 = document.getElementById("inorder");
+e8.innerHTML = 'Inorder :: {4,10,3,1,7,11,8,2}';
+  
+e10 = document.getElementById("preorder");
+e10.innerHTML = 'Preorder :: {7,10,4,3,1,2,8,11}';
+
+}
+
+function handleCardDrop( event, ui ) {
+  var slotNumber = $(this).data( 'number' );
+  console.log(slotNumber);
+  var cardNumber = ui.draggable.data( 'number' );
+  console.log(cardNumber);
+ 
+  if ( slotNumber == cardNumber ) {
+    ui.draggable.addClass( 'correct' );
+    ui.draggable.draggable( 'disable' );
+    $(this).droppable( 'disable' );
+    ui.draggable.position( { of: $(this), my: 'left top', at: 'left top' } );
+    ui.draggable.draggable( 'option', 'revert', false );
+    correctdrag++;
+    points_earned = points_earned + 10;
+    updatescore();
+    console.log("correct drag is "+correctdrag);
+  }
+
+  if( slotNumber !== cardNumber){
+    bad++;
+    updatebad();
+    //alert("bad job");
+  }
+
+}
+
+function updatescore() {
+      e4.innerHTML = 'score ::   ' + points_earned;
+}
+  
+function updatebad() {
+      e6.innerHTML = 'missed ::   ' + bad;
+}
+
+</script>
+</head>
+<body>
+ 
+<div id="section">
+  <div class="container">
+
+    <div class="one"><br>
+      <div id="box">
+        <h3></h3>
+      </div>
+    </div>
+
+    <div class="two">
+      <div id="box_2">
+        <h3></h3>
+      </div>
+
+      <div id="box_2_1">
+        <h3></h3>
+      </div>
+    </div>
+    
+    <div style="clear:both;"></div>
+
+    <div class="three">
+      <div id="box_3_1">
+        <h3></h3>
+      </div>
+
+      <div id="box_3_2">
+        <h3></h3>
+      </div>
+
+      <div id="box_3_3">
+        <h3></h3>
+      </div>
+
+      <div id="box_3_4">
+        <h3></h3>
+      </div>
+    
+    </div>
+
+    <div style="clear:both;"></div>
+
+    <div class="four">
+      <div id="box_4_1">
+        <h3></h3>
+      </div>
+
+      <div id="box_4_2">
+        <h3></h3>
+      </div>
+
+      <div id="box_4_3">
+        <h3></h3>
+      </div>
+
+      <div id="box_4_4">
+        <h3></h3>
+      </div>
+
+      <div id="box_4_5">
+        <h3></h3>
+      </div>
+
+      <div id="box_4_6">
+        <h3></h3>
+      </div>
+
+      <div id="box_4_7">
+        <h3></h3>
+      </div>
+
+      <div id="box_4_8">
+        <h3></h3>
+      </div>
+
+    </div>
+  </div>
+    
+    <div class="section_two">
+        <div class="section_two_container"><br>
+            <div id="timer"></div>
+            <div id="score"></div>
+            <div id="missed"></div>
+            <div id="inorder"></div>
+            <div id="preorder"></div>
+        </div>
+    </div>
+</div>
+    
+    <div class="container_two">
+        <div class="container_row">
+        <!--div class="container_two_header">
+            <h3>Inorder elements</h3>
+        </div-->
+        <div class="inner_container">
+        
+        <div class="box_pile1">
+            <div id="pile1">
+                <h3>4</h3> 
+            </div>
+        </div>
+            
+        <div class="box_pile2">
+            <div id="pile2">
+                <h3>10</h3> 
+            </div>
+        </div>
+            
+        <div class="box_pile3">
+            <div id="pile3">
+                <h3>3</h3> 
+            </div>
+        </div>
+        
+        <div class="box_pile4">
+            <div id="pile4">
+                <h3>1</h3> 
+            </div>
+        </div>
+            
+        <div class="box_pile5">
+            <div id="pile5">
+                <h3>7</h3> 
+            </div>
+        </div>
+            
+        <div class="box_pile6">
+            <div id="pile6">
+                <h3>11</h3> 
+            </div>
+        </div>
+            
+        <div class="box_pile7">
+            <div id="pile7">
+               <h3>8</h3>  
+            </div>
+        </div>
+            
+        <div class="box_pile8">
+            <div id="pile8">
+                <h3>2</h3> 
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+</html>

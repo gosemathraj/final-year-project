@@ -1,0 +1,489 @@
+
+
+body {
+  background-color: #34495e;
+  color: #333;
+  font-family: "Georgia",serif;
+  line-height: 1.8em;
+  margin: 30px;
+}
+
+
+.bubble h3{
+  font-family: LuckiestGuy;
+  margin: 0px;
+  font-size: 54px;
+}
+
+ 
+/* Give headings their own font */
+ 
+h1, h2, h3, h4 {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+ 
+/* Main content area */
+ 
+#content {
+    -moz-user-select: none;
+    background: none repeat scroll 0 0 orange;
+    border: 13px double;
+    border-radius: 22px;
+    height: 568px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 773px;
+}
+ 
+/* Header/footer boxes */
+ 
+.wideBox {
+  clear: both;
+  text-align: center;
+  margin: 70px;
+  padding: 10px;
+  background: #ebedf2;
+  border: 1px solid #333;
+}
+ 
+.wideBox h1 {
+  font-weight: bold;
+  margin: 20px;
+  color: #666;
+  font-size: 1.5em;
+}
+ 
+/* Slots for final card positions */
+ 
+#cardSlots {
+  margin: 50px auto 0 auto;
+  background: #ddf;
+}
+ 
+/* The initial pile of unsorted cards */
+ 
+#cardPile {
+  margin: 0 auto;
+  background: #ffd;
+}
+ 
+#cardSlots, #cardPile {
+  width: 910px;
+  height: 120px;
+  padding: 20px;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+}
+ 
+/* Individual cards and slots */
+ 
+#cardSlots div, #cardPile div {
+  float: left;
+  width: 58px;
+  height: 78px;
+  padding: 10px;
+  padding-top: 40px;
+  padding-bottom: 0;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin: 0 0 0 10px;
+  background: #fff;
+}
+ 
+#cardSlots div:first-child, #cardPile div:first-child {
+  margin-left: 0;
+}
+ 
+#cardSlots div.hovered {
+  background: #aaa;
+}
+ 
+#cardSlots div {
+  border-style: dashed;
+}
+ 
+#cardPile div {
+  background: #666;
+  color: #fff;
+  font-size: 50px;
+  text-shadow: 0 0 3px #000;
+}
+ 
+#cardPile div.ui-draggable-dragging {
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+ 
+/* Individually coloured cards */
+ 
+#card1.correct { background: red; }
+#card2.correct { background: brown; }
+#card3.correct { background: orange; }
+#card4.correct { background: yellow; }
+#card5.correct { background: green; }
+#card6.correct { background: cyan; }
+#card7.correct { background: blue; }
+#card8.correct { background: indigo; }
+#card9.correct { background: purple; }
+#card10.correct { background: violet; }
+#card11.correct { background: red; }
+#card12.correct { background: brown; }
+#card13.correct { background: orange; }
+#card14.correct { background: yellow; }
+#card15.correct { background: green; }
+#card16.correct { background: cyan; }
+#card17.correct { background: blue; }
+#card18.correct { background: indigo; }
+#card19.correct { background: purple; }
+#card20.correct { background: violet; }
+#card21.correct { background: red; }
+#card22.correct { background: brown; }
+#card23.correct { background: orange; }
+#card24.correct { background: yellow; }
+#card25.correct { background: green; }
+#card26.correct { background: cyan; }
+#card27.correct { background: blue; }
+#card28.correct { background: indigo; }
+#card29.correct { background: purple; }
+#card30.correct { background: violet; }
+#card31.correct { background: red; }
+#card32.correct { background: brown; }
+#card33.correct { background: orange; }
+#card34.correct { background: yellow; }
+#card35.correct { background: green; }
+#card36.correct { background: cyan; }
+#card37.correct { background: blue; }
+#card38.correct { background: indigo; }
+#card39.correct { background: purple; }
+#card40.correct { background: violet; }
+#card41.correct { background: red; }
+#card42.correct { background: brown; }
+#card43.correct { background: orange; }
+#card44.correct { background: yellow; }
+#card45.correct { background: green; }
+#card46.correct { background: cyan; }
+#card47.correct { background: blue; }
+#card48.correct { background: indigo; }
+#card49.correct { background: purple; }
+#card50.correct { background: violet; }
+#card51.correct { background: red; }
+#card52.correct { background: brown; }
+#card53.correct { background: orange; }
+#card54.correct { background: yellow; }
+#card55.correct { background: green; }
+#card56.correct { background: cyan; }
+#card57.correct { background: blue; }
+#card58.correct { background: indigo; }
+#card59.correct { background: purple; }
+#card60.correct { background: violet; }
+#card61.correct { background: red; }
+#card62.correct { background: brown; }
+#card63.correct { background: orange; }
+#card64.correct { background: yellow; }
+#card65.correct { background: green; }
+#card66.correct { background: cyan; }
+#card67.correct { background: blue; }
+#card68.correct { background: indigo; }
+#card69.correct { background: purple; }
+#card70.correct { background: violet; }
+#card71.correct { background: red; }
+#card72.correct { background: brown; }
+#card73.correct { background: orange; }
+#card74.correct { background: yellow; }
+#card75.correct { background: green; }
+#card76.correct { background: cyan; }
+#card77.correct { background: blue; }
+#card78.correct { background: indigo; }
+#card79.correct { background: purple; }
+#card80.correct { background: violet; }
+#card81.correct { background: red; }
+#card82.correct { background: brown; }
+#card83.correct { background: orange; }
+#card84.correct { background: yellow; }
+#card85.correct { background: green; }
+#card86.correct { background: cyan; }
+#card87.correct { background: blue; }
+#card88.correct { background: indigo; }
+#card89.correct { background: purple; }
+#card90.correct { background: violet; }
+#card91.correct { background: red; }
+#card92.correct { background: brown; }
+#card93.correct { background: orange; }
+#card94.correct { background: yellow; }
+#card95.correct { background: green; }
+#card96.correct { background: cyan; }
+#card97.correct { background: blue; }
+#card98.correct { background: indigo; }
+#card99.correct { background: purple; }
+#card100.correct { background: violet; }
+ 
+/* "You did it!" message */
+#successMessage {
+  position: absolute;
+  left: 580px;
+  top: 250px;
+  width: 0;
+  height: 0;
+  z-index: 100;
+  background: #dfd;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  padding: 20px;
+}
+
+
+
+/* "You did it!" message */
+#LostMessage {
+  position: absolute;
+  left: 580px;
+  top: 250px;
+  width: 0;
+  height: 0;
+  z-index: 100;
+  background: #dfd;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  padding: 20px;
+}
+
+
+
+element.style {
+    position: relative;
+    z-index: 0;
+}
+#cardSlots div:first-child, #cardPile div:first-child {
+    margin-left: 0;
+}
+#cardPile div {
+    background: url("") repeat scroll 0 0 #666;
+    color: #fff;
+    font-size: 40px;
+    text-shadow: 0 0 3px #000;
+}
+#cardSlots div, #cardPile div {
+    background: none repeat scroll 0 0 #fff;
+    border: 2px solid #333;
+    border-radius: 18px;
+    float: left;
+    font-family: cursive;
+    font-size: 22px;
+    height: 54px;
+    margin: 0 0 0 10px;
+    padding: 12px 4px 0;
+    width: 40px;
+}
+
+
+
+/*#content {
+    -moz-user-select: none;
+    margin: 42px 20px;
+    text-align: center;
+}*/
+
+
+#cardSlots, #cardPile {
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.8);
+    height: 73px;
+    padding: 20px;
+    width: 620px;
+}
+
+
+element.style {
+    display: block;
+    height: 115px;
+    left: 175px;
+    opacity: 1;
+    top: 92px;
+    width: 320px;
+}
+#successMessage {
+    background: none repeat scroll 0 0 #dfd;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0.3em 0.3em 0.5em rgba(0, 0, 0, 0.8);
+    height: 0;
+    left: 580px;
+    padding: 13px;
+    position: absolute;
+    top: 250px;
+    width: 0;
+    z-index: 100;
+}
+
+
+#LostMessage {
+    background: none repeat scroll 0 0 #dfd;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0.3em 0.3em 0.5em rgba(0, 0, 0, 0.8);
+    height: 0;
+    left: 580px;
+    padding: 13px;
+    position: absolute;
+    top: 250px;
+    width: 0;
+    z-index: 100;
+}
+
+#button{
+	padding:10px;
+}
+
+
+/*#content {
+    -moz-user-select: none;
+    margin: 23px -17px;
+    text-align: center;
+}*/
+
+#header_three {
+  //font-size: 60px;
+  font-family: LuckiestGuy;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 654px;
+}
+
+#countdown {
+    //width: 100px;
+    float: right;
+}
+
+#missed {
+    float:left;
+}
+
+.header {
+   height: 50px;
+   margin: 0 auto;
+   padding: 0;
+   width: 493px;
+   margin-top: 42px;
+}
+
+#score{
+  //border: medium double black;
+  color: red;
+  //font-family: luckiestguy;
+  font-size: 22px;
+  font-weight: bolder;
+  margin-bottom: 11px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  float: left;
+}
+
+#header_two {
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 654px;
+}
+
+#scorecard  {
+    margin: 0px;
+    float: right;
+}
+
+#pop_score {
+    //background: url("../images/header13.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: none repeat scroll 0 0 beige;
+    border-radius: 49px;
+    border-style: double;
+    border-width: 15px;
+    box-shadow: 0 0 91px;
+    height: 300px;
+    width: 300px;
+}
+
+#popup_container {
+    text-align: center;
+}
+
+#popup_goodjob {
+    color: orange;
+    font-family: luckiestguy;
+    font-size: 29px; 
+}
+
+#popup_score {
+    color: orange;
+    font-family: luckiestguy;
+    margin-top: 11px;
+}
+
+#popup_time {
+    color: orange;
+    font-family: luckiestguy;
+    margin-top: 11px;
+}
+
+#popup_button,#popup_button1 {
+    background: none repeat scroll 0 0 peru;
+    border-color: green;
+    border-radius: 42px;
+    border-style: inherit;
+    border-width: 4px;
+    box-shadow: 0 0 21px;
+    font-family: gamified;
+    font-size: 13px;
+    height: 42px;
+    margin-top: 35px;
+    width: 150px;
+}
+
+#popup_missed {
+    color: orange;
+    font-family: luckiestguy;
+}
+
+#time_out {
+    //background: url("../images/header13.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: none repeat scroll 0 0 beige;
+    border-radius: 49px;
+    border-style: double;
+    border-width: 15px;
+    box-shadow: 0 0 91px;
+    height: 300px;
+    width: 300px;
+}
+
+#timeout_container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#timeout_header {
+    color: orange;
+    font-family: luckiestguy;
+    font-size: 29px;
+}
+

@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+ 
+<title>A jQuery Drag-and-Drop Number Cards Game</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+ 
+<script type="text/javascript" src="../js/jquery-min.js"></script>
+<script type="text/javascript" src="../js/googlejquery-min.js"></script>
+<!--link rel="stylesheet" href="../css/drag.css"-->
+
+<style>
+
+#section {
+  height: 500px;
+  margin: 20px;
+
+}
+
+.container {
+  height: 500px;
+}
+
+.inner_container {
+  margin: 17px;
+  height: 300px;
+  background: url("../images/order_bg1.jpg")
+}
+
+.header {
+  height: 34px;
+}
+
+.header h3 {
+  text-align: center;
+  margin: 0;
+}
+
+.one,.two,.three,.four,.five,.six{
+  height: 60px;
+}
+
+#node1 {
+  height: 40px;
+width: 40px;
+margin: 2px auto 2px 582px;
+background: none repeat scroll 0% 0% #F00;
+border-radius: 26px;
+}
+
+.node2 {
+  height: 40px;
+width: 40px;
+margin: 2px 2px 2px 436px;
+background: none repeat scroll 0% 0% #F00;
+border-radius: 26px;
+float: left;
+}
+
+.node2 h4 {
+  margin: 0;
+}
+
+.node2_1 {
+  height: 40px;
+width: 40px;
+margin: 2px 2px 2px 239px;
+background: none repeat scroll 0% 0% #F00;
+border-radius: 26px;
+float: left;
+}
+
+.node2_1 h4 {
+  margin: 0;
+}
+
+.node1 h4 {
+  margin: 0 0 0 12px;
+  line-height: 33px;
+}
+
+.node3,.node3_1,.node3_2,.node3_3 {
+  height: 40px;
+  width: 40px;
+  margin: 2px;
+  background: red;
+  border-radius: 26px;
+  float: left;
+}
+
+.node3 {
+  margin-left: 354px;
+margin-top: 19px;
+}
+
+.node3_1 {
+  margin-left: 94px;
+margin-top: 23px;
+}
+
+.node3_2 {
+  margin-left: 136px;
+margin-top: 22px;
+}
+
+.node3_3 {
+  margin-left: 80px;
+margin-top: 19px;
+}
+
+.node4,.node4_1,.node4_2,.node4_3,.node4_4,.node4_5,.node4_6,.node4_7 {
+  height: 40px;
+  width: 40px;
+  margin: 2px;
+  background: red;
+  border-radius: 26px;
+  float: left;
+}
+
+.four {
+    margin-top: 41px;
+}
+
+.node4 {
+  margin-left: 281px;
+}
+
+.node4_1 {
+  margin-left: 51px;
+}
+
+.node4_2 {
+  margin-left: 41px;
+}
+
+.node4_3 {
+  margin-left: 28px;
+}
+
+.node4_4 {
+  margin-left: 54px;
+}
+
+.node4_5 {
+  margin-left: 30px;
+}
+
+.node4_6 {
+  margin-left: 20px;
+}
+
+.node4_7 {
+  margin-left: 40px;
+}
+
+</style>
+
+<script type="text/javascript">
+$(init);
+function init() 
+{
+$("#node1").data('number',"10").droppable({
+
+});
+
+$("#node2").data('number',"10").droppable({
+
+});
+
+$("#node2_1").data('number',"10").droppable({
+
+});
+
+$("#node3").data('number',"10").droppable({
+
+});
+
+$("#node3_1").data('number',"10").droppable({
+
+});
+
+$("#node3_2").data('number',"10").droppable({
+
+});
+
+$("#node3_3").data('number',"10").droppable({
+
+});
+
+$("#node4").data('number',"10").droppable({
+
+});
+
+$("#node4_1").data('number',"10").droppable({
+
+});
+
+$("#node4_2").data('number',"10").droppable({
+
+});
+
+$("#node4_3").data('number',"10").droppable({
+
+});
+
+$("#node4_4").data('number',"10").droppable({
+
+});
+
+$("#node4_5").data('number',"10").droppable({
+
+});
+
+$("#node4_6").data('number',"10").droppable({
+
+});
+
+$("#node4_7").data('number',"10").droppable({
+
+});
+}
+
+</script>
+</head>
+<body>
+ 
+<div id="section">
+  <div class="container">
+    <div class="inner_container">
+      <div class="header">
+        <h3>Post order</h3>
+      </div>
+
+      <div class="one">
+        <div id="node1" class="ui-draggable"><h4>11</h4></div>
+      </div>
+
+        <div style="clear:both;"></div>
+        
+      <div class="two">
+          <div class="node2"><h4>11</h4></div>
+        <div class="node2_1"><h4>12</h4></div>
+      </div>
+
+      <div style="clear:both;"></div>
+
+      <div class="three">
+        <div class="node3"><h4>11</h4></div>
+        <div class="node3_1"><h4>11</h4></div>
+        <div class="node3_2"><h4>11</h4></div>
+        <div class="node3_3"><h4>11</h4></div>
+      </div>
+
+      <div style="clear:both;"></div>
+
+      <div class="four">
+        <div class="node4"><h4>11</h4></div>
+        <div class="node4_1"><h4>11</h4></div>
+        <div class="node4_2"><h4>11</h4></div>
+        <div class="node4_3"><h4>11</h4></div>
+        <div class="node4_4"><h4>11</h4></div>
+        <div class="node4_5"><h4>11</h4></div>
+        <div class="node4_6"><h4>11</h4></div>
+        <div class="node4_7"><h4>11</h4></div>
+      </div>
+
+      <div style="clear:both;"></div>
+
+      
+    </div>
+  </div>
+</div>
+</body>
+</html>

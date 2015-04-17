@@ -1,0 +1,36 @@
+<!DOCTYPE tml>
+<html>
+<head>
+	<title></title>
+
+	<script type="text/javascript" src="../js/modernizr.custom.28468.js"></script>
+	<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+
+<style type="text/css">
+span.image-radio input[type="radio"]:checked + img{
+    border:1px solid red;
+    background-color: red;
+}
+</style>
+</head>
+<body>
+
+<div id="radio-button-wrapper">
+    <span class="image-radio">
+        <input name="any-name" style="display:none" type="radio"/>
+        <img src="../images/dice1.png">
+    </span>
+    <span class="image-radio">
+        <input name="any-name" style="display:none" type="radio"/>
+        <img src="../images/dice1.png">
+    </span>
+</div>
+
+<script type="text/javascript">
+	 $(".image-radio img").click(function(){
+     $(this).prev().attr('checked',true);
+ })
+</script>
+
+</body>
+</html>
